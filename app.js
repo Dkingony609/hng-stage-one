@@ -12,7 +12,7 @@ app.get("/get_info", (req, res) => {
   const currentDayOfWeek = moment().format("dddd");
 
   // Current UTC time with validation of +/-2 hours
-  const currentUTCTime = new Date().toISOString();
+  const currentUTCTime = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
 
   // GitHub URL of the file being run and full source code URL
   const githubFileURL = "https://github.com/Dkingony609/hng-stage-one";
