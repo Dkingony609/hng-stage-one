@@ -12,14 +12,12 @@ app.get("/get_info", (req, res) => {
   const currentDayOfWeek = moment().format("dddd");
 
   // Current UTC time with validation of +/-2 hours
-  const currentUTCTime = moment()
-    .utcOffset(0)
-    .add(2, "hours")
-    .format("HH:mm:ss");
+  const currentUTCTime = new Date().toISOString();
 
   // GitHub URL of the file being run and full source code URL
-  const githubFileURL = "https://github.com/dkingony609";
-  const githubSourceCodeURL = "https://github.com/dkingony609";
+  const githubFileURL = "https://github.com/Dkingony609/hng-stage-one";
+  const githubSourceCodeURL =
+    "https://github.com/Dkingony609/hng-stage-one/blob/master/app.js";
 
   // Response JSON object
   const response = {
